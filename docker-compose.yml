@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  pignus_db:
+    container_name: ingsoftdb
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ingsoftdb
+      MYSQL_DEFAULT_AUTHENTICATION_PLUGIN: caching_sha2_password
+    restart: always
+    ports:
+      - "3306:3306"
