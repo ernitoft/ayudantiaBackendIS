@@ -35,13 +35,12 @@ class AuthController extends BaseController
             'data' => [
                 'token' => $token,
                 'user' => $user,
-                'token2' => '123'
             ],
             'error' => false
         ],200);
     }
 
-    public function logout (){
+    public function logout (Request $request){
         Auth::logout();
         return response([
             'message'=>'Sesión cerrada',
