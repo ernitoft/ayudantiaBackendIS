@@ -24,3 +24,6 @@ Route::get('user', 'App\Http\Controllers\AuthController@UserLogged')->middleware
 Route::post('user/logout', 'App\Http\Controllers\AuthController@logout')->middleware('auth:api');
 Route::get('user/getAll', 'App\Http\Controllers\UsersController@getAll')->middleware('auth:api');
 Route::delete('user/delete/{id}', 'App\Http\Controllers\UsersController@delete')->middleware('auth:api');
+
+//Products
+Route::get('products/', 'App\Http\Controllers\ProductController@getAllProducts');

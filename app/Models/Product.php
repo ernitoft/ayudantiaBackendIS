@@ -18,4 +18,8 @@ class Product extends Model
         'type',
         'ISBN'
     ];
+
+    public function reviews(){
+        return $this->hasMany(Review::class);
+    }
 }
